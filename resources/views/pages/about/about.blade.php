@@ -9,5 +9,5 @@ new class extends Component
 ?>
 
 <div>
-    {{-- Walk as if you are kissing the Earth with your feet. - Thich Nhat Hanh --}}
+    {{-- The biggest battle is the war against ignorance. - Mustafa Kemal Atatürk --}}
 </div>
