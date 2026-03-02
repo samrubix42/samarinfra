@@ -61,7 +61,7 @@ new class extends Component
                     </ul>
                 </div>
                 <div class="relative order-1 lg:order-2">
-                    <div class="absolute -bottom-6 -right-6 w-full h-full border-2 border-accent rounded-xl"></div>
+                    <div class="absolute -bottom-6 -right-6 w-full h-full -xl"></div>
                     <img src="/hero_highway_construction_1772435224309.png" alt="Highway Construction" class="relative rounded-xl w-full h-[400px] object-cover grayscale hover:grayscale-0 transition-all duration-700">
                 </div>
             </div>
@@ -69,7 +69,7 @@ new class extends Component
             <!-- RAILWAY INFRASTRUCTURE -->
             <div class="grid lg:grid-cols-2 gap-20 items-center">
                 <div class="relative">
-                    <div class="absolute -bottom-6 -left-6 w-full h-full border-2 border-accent rounded-xl"></div>
+                    <div class="absolute -bottom-6 -left-6 w-full h-full -xl"></div>
                     <img src="/railway_metro_infrastructure_1772435294249.png" alt="Railway Infrastructure" class="relative rounded-xl w-full h-[400px] object-cover grayscale hover:grayscale-0 transition-all duration-700">
                 </div>
                 <div>
@@ -142,7 +142,7 @@ new class extends Component
                     </div>
                 </div>
                 <div class="relative order-1 lg:order-2">
-                    <div class="absolute -bottom-6 -right-6 w-full h-full border-2 border-accent rounded-xl"></div>
+                    <div class="absolute -bottom-6 -right-6 w-full h-full -xl"></div>
                     <img src="/crushing_plant_mining_1772435274771.png" alt="Mining Operations" class="relative rounded-xl w-full h-[400px] object-cover grayscale hover:grayscale-0 transition-all duration-700">
                 </div>
             </div>

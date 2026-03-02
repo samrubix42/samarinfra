@@ -28,7 +28,7 @@ new class extends Component
 
     </div>
 </section>
-<section class="py-28 bg-background">
+<section class="py-20 bg-background">
     <div class="container-custom grid lg:grid-cols-2 gap-20 items-center">
 
         <!-- IMAGE SIDE -->
@@ -96,7 +96,7 @@ new class extends Component
 
     </div>
 </section>
-<section class="py-28 bg-background-soft border-t border-border">
+<section class="py-20 bg-background-soft border-t border-border">
     <div class="container-custom">
 
         <!-- SECTION HEADER -->
@@ -153,6 +153,153 @@ new class extends Component
                     for stakeholders.
                 </p>
 
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<section class="py-20 bg-background-soft border-t border-border">
+    <div class="container-custom">
+
+        <!-- Section Header -->
+        <div class="max-w-2xl mb-20">
+            <span class="text-accent text-xs font-semibold uppercase tracking-[0.25em]">
+                Our Scale
+            </span>
+
+            <h2 class="mt-4 text-3xl md:text-4xl font-bold text-primary">
+                Strength in Numbers
+            </h2>
+
+            <div class="w-16 h-[2px] bg-accent mt-6"></div>
+        </div>
+
+        <!-- Stats Grid -->
+        <div class="grid md:grid-cols-4 gap-10">
+
+            <div class="p-8 bg-background border border-border rounded-xl text-center">
+                <p class="text-3xl font-bold text-primary">₹4000M+</p>
+                <p class="mt-3 text-xs uppercase tracking-widest text-secondary">
+                    Annual Turnover
+                </p>
+            </div>
+
+            <div class="p-8 bg-background border border-border rounded-xl text-center">
+                <p class="text-3xl font-bold text-primary">238+</p>
+                <p class="mt-3 text-xs uppercase tracking-widest text-secondary">
+                    Professionals
+                </p>
+            </div>
+
+            <div class="p-8 bg-background border border-border rounded-xl text-center">
+                <p class="text-3xl font-bold text-primary">200+</p>
+                <p class="mt-3 text-xs uppercase tracking-widest text-secondary">
+                    Machinery Fleet
+                </p>
+            </div>
+
+            <div class="p-8 bg-background border border-border rounded-xl text-center">
+                <p class="text-3xl font-bold text-primary">60 Lakh MT</p>
+                <p class="mt-3 text-xs uppercase tracking-widest text-secondary">
+                    Annual Crushing Capacity
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<section class="py-20 bg-background border-t border-border">
+    <div class="container-custom">
+
+        <!-- Header -->
+        <div class="max-w-2xl mb-20">
+            <span class="text-accent text-xs font-semibold uppercase tracking-[0.25em]">
+                Our Foundation
+            </span>
+
+            <h2 class="mt-4 text-3xl md:text-4xl font-bold text-primary">
+                Core Values
+            </h2>
+
+            <div class="w-16 h-[2px] bg-accent mt-6"></div>
+
+            <p class="mt-6 text-secondary">
+                The principles that define our execution standards and operational discipline.
+            </p>
+        </div>
+
+        <!-- Values Grid -->
+        <div class="grid md:grid-cols-3 gap-12">
+
+            <div class="p-8 border border-border rounded-xl bg-background-soft">
+                <div class="w-12 h-12 flex items-center justify-center bg-accent text-white rounded-md mb-6">
+                    <i class="ri-shield-check-line text-lg"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-primary mb-3">
+                    Integrity
+                </h3>
+                <p class="text-sm text-secondary leading-relaxed">
+                    Transparent communication and ethical project execution
+                    across every level of operation.
+                </p>
+            </div>
+
+            <div class="p-8 border border-border rounded-xl bg-background-soft">
+                <div class="w-12 h-12 flex items-center justify-center bg-accent text-white rounded-md mb-6">
+                    <i class="ri-timer-line text-lg"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-primary mb-3">
+                    Discipline
+                </h3>
+                <p class="text-sm text-secondary leading-relaxed">
+                    Structured processes ensuring timely delivery and
+                    operational consistency across projects.
+                </p>
+            </div>
+
+            <div class="p-8 border border-border rounded-xl bg-background-soft">
+                <div class="w-12 h-12 flex items-center justify-center bg-accent text-white rounded-md mb-6">
+                    <i class="ri-award-line text-lg"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-primary mb-3">
+                    Excellence
+                </h3>
+                <p class="text-sm text-secondary leading-relaxed">
+                    Commitment to quality, safety compliance and engineering
+                    precision in every execution phase.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<section class="py-20 bg-background border-t border-border">
+    <div class="container-custom">
+
+        <div class="max-w-4xl mx-auto text-center">
+
+            <span class="text-accent text-xs font-semibold uppercase tracking-[0.3em]">
+                Let’s Work Together
+            </span>
+
+            <h2 class="mt-6 text-3xl md:text-4xl lg:text-5xl font-bold text-primary leading-[1.2]">
+                Partner With a Proven Infrastructure Leader
+            </h2>
+
+            <p class="mt-6 text-secondary leading-relaxed max-w-2xl mx-auto">
+                Samar Infra Pvt Ltd delivers large-scale infrastructure projects
+                with disciplined execution, operational excellence and financial strength.
+            </p>
+
+            <div class="mt-10">
+                <a href="{{ route('contact') }}"
+                   wire:navigate
+                   class="inline-flex items-center justify-center px-8 py-3 text-sm font-semibold bg-accent text-white rounded-md hover:bg-accent-dark transition">
+                    Request a Proposal
+                </a>
             </div>
 
         </div>
