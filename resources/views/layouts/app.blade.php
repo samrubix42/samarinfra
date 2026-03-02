@@ -33,6 +33,51 @@
     <!-- FOOTER -->
     <livewire:include.footer />
 
+    <script>
+document.addEventListener('alpine:init', () => {
+    Alpine.data('typingEffect', () => ({
+        words: [
+            "Built to Perform.",
+            "Executed with Precision.",
+            "Delivered with Integrity."
+        ],
+        wordIndex: 0,
+        charIndex: 0,
+        displayText: '',
+        typingSpeed: 70,
+        deletingSpeed: 40,
+        delayBetweenWords: 1500,
+
+        init() {
+            this.type();
+        },
+
+        type() {
+            const currentWord = this.words[this.wordIndex];
+
+            if (this.charIndex < currentWord.length) {
+                this.displayText += currentWord[this.charIndex];
+                this.charIndex++;
+                setTimeout(() => this.type(), this.typingSpeed);
+            } else {
+                setTimeout(() => this.delete(), this.delayBetweenWords);
+            }
+        },
+
+        delete() {
+            if (this.charIndex > 0) {
+                this.displayText = this.displayText.slice(0, -1);
+                this.charIndex--;
+                setTimeout(() => this.delete(), this.deletingSpeed);
+            } else {
+                this.wordIndex = (this.wordIndex + 1) % this.words.length;
+                setTimeout(() => this.type(), 300);
+            }
+        }
+    }))
+})
+</script>
+
     @livewireScripts
 </body>
 

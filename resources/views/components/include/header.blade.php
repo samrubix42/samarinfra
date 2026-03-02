@@ -6,11 +6,11 @@ new class extends Component {};
 ?>
 
 <header
+    x-cloak
     x-data="{ open: false, scrolled: false }"
     x-init="window.addEventListener('scroll', () => scrolled = window.scrollY > 10)"
     :class="scrolled ? 'shadow-sm' : ''"
-    class="sticky top-0 z-50 w-full bg-background border-b border-border transition-all duration-300"
->
+    class="sticky top-0 z-50 w-full bg-background border-b border-border transition-all duration-300">
     <!-- ================= DESKTOP HEADER ================= -->
     <div class="container-custom h-16 flex items-center justify-between">
 
@@ -19,8 +19,7 @@ new class extends Component {};
             <img
                 src="/images/logo.png"
                 alt="Samar Infra Logo"
-                class="h-10 w-auto object-contain"
-            >
+                class="h-10 w-auto object-contain">
             <div class="flex flex-col leading-tight">
                 <span class="text-base font-bold uppercase tracking-tight text-primary">
                     Samar <span class="text-accent">Infra</span>
@@ -43,14 +42,12 @@ new class extends Component {};
         <div class="hidden md:flex items-center gap-3">
             <a
                 href="{{ route('contact') }}"
-                class="px-5 py-2 text-sm font-medium border border-primary text-primary rounded-md hover:bg-primary hover:text-white transition"
-            >
+                class="px-5 py-2 text-sm font-medium border border-primary text-primary rounded-md hover:bg-primary hover:text-white transition">
                 Inquiry
             </a>
             <a
                 href="{{ route('service') }}"
-                class="px-5 py-2 text-sm font-medium bg-accent text-white rounded-md hover:bg-accent-dark transition"
-            >
+                class="px-5 py-2 text-sm font-medium bg-accent text-white rounded-md hover:bg-accent-dark transition">
                 Projects
             </a>
         </div>
@@ -70,8 +67,7 @@ new class extends Component {};
         x-transition:leave="transition ease-in duration-200"
         x-transition:leave-start="translate-x-0"
         x-transition:leave-end="translate-x-full"
-        class="fixed inset-0 z-50 bg-background md:hidden"
-    >
+        class="fixed inset-0 z-50 bg-background md:hidden">
         <!-- Mobile Header -->
         <div class="h-16 flex items-center justify-between px-6 border-b border-border">
             <span class="text-sm font-bold uppercase tracking-wider text-primary">
@@ -92,14 +88,12 @@ new class extends Component {};
             <div class="pt-6 flex flex-col gap-4 w-48">
                 <a
                     href="{{ route('contact') }}"
-                    class="text-center px-4 py-2 border border-primary text-primary rounded-md"
-                >
+                    class="text-center px-4 py-2 border border-primary text-primary rounded-md">
                     Inquiry
                 </a>
                 <a
                     href="{{ route('service') }}"
-                    class="text-center px-4 py-2 bg-accent text-white rounded-md"
-                >
+                    class="text-center px-4 py-2 bg-accent text-white rounded-md">
                     Projects
                 </a>
             </div>
