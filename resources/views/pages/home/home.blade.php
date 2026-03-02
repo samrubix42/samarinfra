@@ -1,8 +1,10 @@
 <?php
 
+use Livewire\Attributes\Title;
 use Livewire\Component;
 
-new class extends Component
+
+new #[Title('Home | Samar Infra Pvt Ltd')] class extends Component
 {
     //
 };
