@@ -32,10 +32,10 @@ new class extends Component {};
 
         <!-- DESKTOP NAV -->
         <nav class="hidden md:flex items-center gap-8 text-sm font-semibold uppercase tracking-wider">
-            <a href="{{ route('home') }}" wire:navigate class="text-primary hover:text-accent transition">Home</a>
-            <a href="{{ route('service') }}" wire:navigate class="text-secondary hover:text-primary transition">Services</a>
-            <a href="{{ route('about') }}" wire:navigate class="text-secondary hover:text-primary transition">About</a>
-            <a href="{{ route('contact') }}" wire:navigate class="text-secondary hover:text-primary transition">Contact</a>
+            <a href="{{ route('home') }}" wire:navigate class="{{ request()->routeIs('home') ? 'text-accent' : 'text-secondary hover:text-accent' }} transition">Home</a>
+            <a href="{{ route('service') }}" wire:navigate class="{{ request()->routeIs('service') ? 'text-accent' : 'text-secondary hover:text-primary' }} transition">Services</a>
+            <a href="{{ route('about') }}" wire:navigate class="{{ request()->routeIs('about') ? 'text-accent' : 'text-secondary hover:text-primary' }} transition">About</a>
+            <a href="{{ route('contact') }}" wire:navigate class="{{ request()->routeIs('contact') ? 'text-accent' : 'text-secondary hover:text-primary' }} transition">Contact</a>
         </nav>
 
         <!-- DESKTOP ACTIONS -->
@@ -82,10 +82,10 @@ new class extends Component {};
 
         <!-- Mobile Links -->
         <div class="flex flex-col items-center justify-center h-[80vh] gap-8 text-lg font-semibold uppercase tracking-wider">
-            <a href="{{ route('home') }}" @click="open=false" wire:navigate class="text-primary">Home</a>
-            <a href="{{ route('service') }}" @click="open=false" wire:navigate class="text-secondary">Services</a>
-            <a href="{{ route('about') }}" @click="open=false" wire:navigate class="text-secondary">About</a>
-            <a href="{{ route('contact') }}" @click="open=false" wire:navigate class="text-secondary">Contact</a>
+            <a href="{{ route('home') }}" @click="open=false" wire:navigate class="{{ request()->routeIs('home') ? 'text-accent' : 'text-secondary' }}">Home</a>
+            <a href="{{ route('service') }}" @click="open=false" wire:navigate class="{{ request()->routeIs('service') ? 'text-accent' : 'text-secondary' }}">Services</a>
+            <a href="{{ route('about') }}" @click="open=false" wire:navigate class="{{ request()->routeIs('about') ? 'text-accent' : 'text-secondary' }}">About</a>
+            <a href="{{ route('contact') }}" @click="open=false" wire:navigate class="{{ request()->routeIs('contact') ? 'text-accent' : 'text-secondary' }}">Contact</a>
 
             <div class="pt-6 flex flex-col gap-4 w-48">
                 <a
