@@ -26,10 +26,10 @@ new class extends Component
                     <span
                         x-data="typingEffect"
                         x-text="displayText"
-                        class="text-accent-dark font-extrabold">
+                        class="text-accent font-extrabold">
                     </span>
 
-                    <span class="ml-1 text-accent-dark animate-pulse">|</span>
+                    <span class="ml-1 text-accent animate-pulse">|</span>
                 </h1>
 
                 <p class="mt-6 text-lg text-secondary leading-relaxed">
@@ -62,50 +62,7 @@ new class extends Component
             </div>
 
         </div>
-        <script>
-            function typingEffect() {
-                return {
-                    words: [
-                        "Built to Perform.",
-                        "Executed with Precision.",
-                        "Delivered with Integrity."
-                    ],
-                    wordIndex: 0,
-                    charIndex: 0,
-                    displayText: '',
-                    typingSpeed: 70,
-                    deletingSpeed: 40,
-                    delayBetweenWords: 1500,
-
-                    start() {
-                        this.type();
-                    },
-
-                    type() {
-                        const currentWord = this.words[this.wordIndex];
-
-                        if (this.charIndex < currentWord.length) {
-                            this.displayText += currentWord[this.charIndex];
-                            this.charIndex++;
-                            setTimeout(() => this.type(), this.typingSpeed);
-                        } else {
-                            setTimeout(() => this.delete(), this.delayBetweenWords);
-                        }
-                    },
-
-                    delete() {
-                        if (this.charIndex > 0) {
-                            this.displayText = this.displayText.slice(0, -1);
-                            this.charIndex--;
-                            setTimeout(() => this.delete(), this.deletingSpeed);
-                        } else {
-                            this.wordIndex = (this.wordIndex + 1) % this.words.length;
-                            setTimeout(() => this.type(), 300);
-                        }
-                    }
-                }
-            }
-        </script>
+  
 
     </section>
 

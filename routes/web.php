@@ -4,9 +4,10 @@ use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
 Route::livewire('/','pages::home.home')->name('home');
-Route::livewire('/about','pages::home.home')->name('about');
-Route::livewire('/contact','pages::home.home')->name('contact');
-Route::livewire('/service','pages::home.home')->name('service');
+Route::livewire('/about','pages::about.about')->name('about');
+Route::livewire('/contact','pages::contact.contact')->name('contact');
+Route::livewire('/service','pages::service.service')->name('service');
+
 
 Route::get('clear-cache',function(){
     Artisan::call('cache:clear');
