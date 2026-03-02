@@ -14,7 +14,7 @@ new class extends Component {};
 
             <!-- BRAND -->
             <div>
-                <a href="{{ route('home') }}" class="flex items-center gap-3 mb-6">
+                <a href="{{ route('home') }}" wire:navigate class="flex items-center gap-3 mb-6">
                     <img src="/images/logo.png" class="h-10 w-auto" alt="Samar Infra Logo">
                     <span class="text-lg font-bold uppercase tracking-tight text-primary">
                         Samar <span class="text-accent">Infra</span>
@@ -22,7 +22,7 @@ new class extends Component {};
                 </a>
 
                 <p class="text-sm text-secondary leading-relaxed mb-6">
-                    Building India’s infrastructure with strength, precision and integrity 
+                    Building India’s infrastructure with strength, precision and integrity
                     since 2002. Delivering large-scale highway, railway and metro projects nationwide.
                 </p>
 
@@ -48,10 +48,10 @@ new class extends Component {};
                 </h4>
 
                 <ul class="space-y-3 text-sm">
-                    <li><a href="{{ route('home') }}" class="text-secondary hover:text-primary transition">Home</a></li>
-                    <li><a href="{{ route('about') }}" class="text-secondary hover:text-primary transition">About Us</a></li>
-                    <li><a href="{{ route('service') }}" class="text-secondary hover:text-primary transition">Services</a></li>
-                    <li><a href="{{ route('contact') }}" class="text-secondary hover:text-primary transition">Contact</a></li>
+                    <li><a href="{{ route('home') }}" wire:navigate class="text-secondary hover:text-primary transition">Home</a></li>
+                    <li><a href="{{ route('about') }}" wire:navigate class="text-secondary hover:text-primary transition">About Us</a></li>
+                    <li><a href="{{ route('service') }}" wire:navigate class="text-secondary hover:text-primary transition">Services</a></li>
+                    <li><a href="{{ route('contact') }}" wire:navigate class="text-secondary hover:text-primary transition">Contact</a></li>
                 </ul>
             </div>
 

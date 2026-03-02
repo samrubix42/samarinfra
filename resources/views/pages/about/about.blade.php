@@ -34,7 +34,7 @@ new class extends Component
         <!-- IMAGE SIDE -->
         <div class="relative">
             <!-- Accent Background Frame -->
-            <div class="absolute -bottom-6 -right-6 w-full h-full border-2 border-accent rounded-xl"></div>
+            <div class="absolute -bottom-6 -right-6 w-full h-full -xl"></div>
 
             <img src="/images/about-company.jpg"
                  alt="Samar Infra Operations"

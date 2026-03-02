@@ -15,7 +15,7 @@ new class extends Component {};
     <div class="container-custom h-16 flex items-center justify-between">
 
         <!-- LOGO -->
-        <a href="{{ route('home') }}" class="flex items-center gap-3">
+        <a href="{{ route('home') }}" wire:navigate class="flex items-center gap-3">
             <img
                 src="/images/logo.png"
                 alt="Samar Infra Logo"
@@ -32,21 +32,23 @@ new class extends Component {};
 
         <!-- DESKTOP NAV -->
         <nav class="hidden md:flex items-center gap-8 text-sm font-semibold uppercase tracking-wider">
-            <a href="{{ route('home') }}" class="text-primary hover:text-accent transition">Home</a>
-            <a href="{{ route('service') }}" class="text-secondary hover:text-primary transition">Services</a>
-            <a href="{{ route('about') }}" class="text-secondary hover:text-primary transition">About</a>
-            <a href="{{ route('contact') }}" class="text-secondary hover:text-primary transition">Contact</a>
+            <a href="{{ route('home') }}" wire:navigate class="text-primary hover:text-accent transition">Home</a>
+            <a href="{{ route('service') }}" wire:navigate class="text-secondary hover:text-primary transition">Services</a>
+            <a href="{{ route('about') }}" wire:navigate class="text-secondary hover:text-primary transition">About</a>
+            <a href="{{ route('contact') }}" wire:navigate class="text-secondary hover:text-primary transition">Contact</a>
         </nav>
 
         <!-- DESKTOP ACTIONS -->
         <div class="hidden md:flex items-center gap-3">
             <a
                 href="{{ route('contact') }}"
+                wire:navigate
                 class="px-5 py-2 text-sm font-medium border border-primary text-primary rounded-md hover:bg-primary hover:text-white transition">
                 Inquiry
             </a>
             <a
                 href="{{ route('service') }}"
+                wire:navigate
                 class="px-5 py-2 text-sm font-medium bg-accent text-white rounded-md hover:bg-accent-dark transition">
                 Projects
             </a>
@@ -80,19 +82,21 @@ new class extends Component {};
 
         <!-- Mobile Links -->
         <div class="flex flex-col items-center justify-center h-[80vh] gap-8 text-lg font-semibold uppercase tracking-wider">
-            <a href="{{ route('home') }}" @click="open=false" class="text-primary">Home</a>
-            <a href="{{ route('service') }}" @click="open=false" class="text-secondary">Services</a>
-            <a href="{{ route('about') }}" @click="open=false" class="text-secondary">About</a>
-            <a href="{{ route('contact') }}" @click="open=false" class="text-secondary">Contact</a>
+            <a href="{{ route('home') }}" @click="open=false" wire:navigate class="text-primary">Home</a>
+            <a href="{{ route('service') }}" @click="open=false" wire:navigate class="text-secondary">Services</a>
+            <a href="{{ route('about') }}" @click="open=false" wire:navigate class="text-secondary">About</a>
+            <a href="{{ route('contact') }}" @click="open=false" wire:navigate class="text-secondary">Contact</a>
 
             <div class="pt-6 flex flex-col gap-4 w-48">
                 <a
                     href="{{ route('contact') }}"
+                    wire:navigate
                     class="text-center px-4 py-2 border border-primary text-primary rounded-md">
                     Inquiry
                 </a>
                 <a
                     href="{{ route('service') }}"
+                    wire:navigate
                     class="text-center px-4 py-2 bg-accent text-white rounded-md">
                     Projects
                 </a>

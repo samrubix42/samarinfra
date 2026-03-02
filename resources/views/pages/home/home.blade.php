@@ -39,11 +39,13 @@ new class extends Component
 
                 <div class="mt-8 flex gap-4">
                     <a href="{{ route('service') }}"
+                        wire:navigate
                         class="px-6 py-2.5 text-sm font-semibold bg-accent text-white rounded-md hover:bg-accent-dark transition">
                         Our Services
                     </a>
 
                     <a href="{{ route('contact') }}"
+                        wire:navigate
                         class="px-6 py-2.5 text-sm font-semibold border border-primary text-primary rounded-md hover:bg-primary hover:text-white transition">
                         Request Proposal
                     </a>
@@ -62,7 +64,7 @@ new class extends Component
             </div>
 
         </div>
-  
+
 
     </section>
 
@@ -486,6 +488,7 @@ new class extends Component
 
             <div class="mt-10">
                 <a href="{{ route('contact') }}"
+                    wire:navigate
                     class="px-8 py-3 text-sm font-semibold bg-accent text-white rounded-md hover:bg-accent-dark transition">
                     Request a Proposal
                 </a>
