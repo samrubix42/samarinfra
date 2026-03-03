@@ -24,6 +24,6 @@ class AppServiceProvider extends ServiceProvider
 
         Blaze::optimize()
         ->in(resource_path('views/components'),fold: true)
-        ->in(resource_path('views/pages'), fold: true);
+        ->in(resource_path('views/pages'));
     }
 }
