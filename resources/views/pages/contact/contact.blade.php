@@ -4,6 +4,8 @@ use Livewire\Attributes\Title;
 use Livewire\Component;
 
 use App\Models\Contact;
+use App\Mail\ContactInquiry;
+use Illuminate\Support\Facades\Mail;
 
 new #[Title('Contact Us | Samar Infra Pvt Ltd')] class extends Component
 {
@@ -21,12 +23,19 @@ new #[Title('Contact Us | Samar Infra Pvt Ltd')] class extends Component
             'message' => 'required|string',
         ]);
 
-        Contact::create([
+        $contact = Contact::create([
             'name' => $this->name,
             'phone' => $this->phone,
             'inquiry_type' => $this->inquiry_type,
             'message' => $this->message,
         ]);
+
+        try {
+            Mail::to('samcool3203@gmail.com')->send(new ContactInquiry($contact));
+        } catch (\Exception $e) {
+            // Log error or handle silently as data is already saved
+            \Illuminate\Support\Facades\Log::error('Failed to send contact inquiry email: ' . $e->getMessage());
+        }
 
         $this->reset();
         session()->flash('status', 'Inquiry sent successfully!');
@@ -110,7 +119,7 @@ new #[Title('Contact Us | Samar Infra Pvt Ltd')] class extends Component
                         </div>
                         <div>
                             <span class="text-accent text-xs font-bold uppercase tracking-widest block mb-4">Call Support</span>
-                              <p class="text-primary font-bold leading-relaxed">
+                            <p class="text-primary font-bold leading-relaxed">
                                 <a href="tel:+919999865786" class="hover:text-accent transition">+91 99998 65786</a><br>
                                 <a href="tel:+919953791500" class="hover:text-accent transition">+91 99537 91500</a>
                             </p>
@@ -124,7 +133,9 @@ new #[Title('Contact Us | Samar Infra Pvt Ltd')] class extends Component
                     <div class="p-10 border border-border rounded-xl bg-background-soft">
                         <h3 class="text-xl font-bold text-primary mb-8">Send a Detailed Inquiry</h3>
 
-                        <form wire:submit="save" class="space-y-6">
+                        <form wire:submit="save"
+                            wire:loading.class="opacity-50 pointer-events-none"
+                            class="space-y-6 transition-opacity">
                             @if (session('status'))
                             <div class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50" role="alert">
                                 {{ session('status') }}
@@ -158,8 +169,29 @@ new #[Title('Contact Us | Samar Infra Pvt Ltd')] class extends Component
                                 <textarea wire:model="message" rows="5" placeholder="Tell us about your project requirements..." class="w-full bg-background border border-border focus:border-accent rounded-md px-5 py-3 outline-none transition-all placeholder:text-gray-300"></textarea>
                                 @error('message') <span class="text-red-500 text-xs">{{ $message }}</span> @enderror
                             </div>
-                            <button type="submit" class="w-full btn-accent py-4">
-                                Submit Inquiry
+                            <button type="submit"
+                                wire:loading.attr="disabled"
+                                class="relative w-full btn-accent py-4 overflow-hidden group transition-all duration-300">
+
+                                <!-- Normal State -->
+                                <div class="flex items-center justify-center gap-3 transition-all duration-300"
+                                    wire:loading.class="opacity-0 -translate-y-full" wire:target="save">
+                                    <span class="font-bold tracking-wider uppercase text-xs">Submit Inquiry</span>
+                                    <i class="ri-send-plane-fill group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                                </div>
+
+                                <!-- Loading State -->
+                                <div class="absolute inset-0 flex items-center justify-center gap-3 opacity-0 translate-y-full transition-all duration-300"
+                                    wire:loading.class="!opacity-100 !translate-y-0" wire:target="save">
+                                    <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                    </svg>
+                                    <span class="font-bold tracking-widest uppercase text-[10px]">Processing Request</span>
+                                </div>
+
+                                <!-- Subtle Shine Effect on hover -->
+                                <div class="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-1000"></div>
                             </button>
                         </form>
                     </div>
