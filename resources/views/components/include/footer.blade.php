@@ -118,8 +118,7 @@ new class extends Component {};
             </p>
 
             <div class="flex gap-6">
-                <a href="#" class="hover:text-primary transition">Privacy Policy</a>
-                <a href="#" class="hover:text-primary transition">Terms of Service</a>
+                <span class="hover:text-primary transition">Powered by<a href="https://techonika.com/" target="_blank" class="hover:text-accent-dark text-accent transition"> Techonika</a></span>
             </div>
 
         </div>
