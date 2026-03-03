@@ -3,11 +3,49 @@
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
+use App\Models\Contact;
+
 new #[Title('Contact Us | Samar Infra Pvt Ltd')] class extends Component
 {
-    //
+    public $name = '';
+    public $phone = '';
+    public $inquiry_type = 'Project Consultation';
+    public $message = '';
+
+    public function save()
+    {
+        $this->validate([
+            'name' => 'required|string|max:255',
+            'phone' => 'required|string|max:20',
+            'inquiry_type' => 'required|string',
+            'message' => 'required|string',
+        ]);
+
+        Contact::create([
+            'name' => $this->name,
+            'phone' => $this->phone,
+            'inquiry_type' => $this->inquiry_type,
+            'message' => $this->message,
+        ]);
+
+        $this->reset();
+        session()->flash('status', 'Inquiry sent successfully!');
+    }
+    public function delete($id)
+    {
+        Contact::find($id)->delete();
+        session()->flash('status', 'Inquiry deleted successfully!');
+    }
+
+    public function with()
+    {
+        return [
+            'contacts' => Contact::latest()->get(),
+        ];
+    }
 };
 ?>
+
 
 <div class="bg-background min-h-screen">
     <!-- BANNER SECTION -->
@@ -86,31 +124,41 @@ new #[Title('Contact Us | Samar Infra Pvt Ltd')] class extends Component
                     <div class="p-10 border border-border rounded-xl bg-background-soft">
                         <h3 class="text-xl font-bold text-primary mb-8">Send a Detailed Inquiry</h3>
 
-                        <form action="#" class="space-y-6">
+                        <form wire:submit="save" class="space-y-6">
+                            @if (session('status'))
+                            <div class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50" role="alert">
+                                {{ session('status') }}
+                            </div>
+                            @endif
+
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <label class="block text-[10px] font-bold text-secondary uppercase tracking-widest mb-2">Full Name</label>
-                                    <input type="text" placeholder="John Doe" class="w-full bg-background border border-border focus:border-accent rounded-md px-5 py-3 outline-none transition-all placeholder:text-gray-300">
+                                    <input wire:model="name" type="text" placeholder="John Doe" class="w-full bg-background border border-border focus:border-accent rounded-md px-5 py-3 outline-none transition-all placeholder:text-gray-300">
+                                    @error('name') <span class="text-red-500 text-xs">{{ $message }}</span> @enderror
                                 </div>
                                 <div>
-                                    <label class="block text-[10px] font-bold text-secondary uppercase tracking-widest mb-2">Email Address</label>
-                                    <input type="email" placeholder="john@example.com" class="w-full bg-background border border-border focus:border-accent rounded-md px-5 py-3 outline-none transition-all placeholder:text-gray-300">
+                                    <label class="block text-[10px] font-bold text-secondary uppercase tracking-widest mb-2">Phone Number</label>
+                                    <input wire:model="phone" type="text" placeholder="+91 00000 00000" class="w-full bg-background border border-border focus:border-accent rounded-md px-5 py-3 outline-none transition-all placeholder:text-gray-300">
+                                    @error('phone') <span class="text-red-500 text-xs">{{ $message }}</span> @enderror
                                 </div>
                             </div>
                             <div>
                                 <label class="block text-[10px] font-bold text-secondary uppercase tracking-widest mb-2">Inquiry Type</label>
-                                <select class="w-full bg-background border border-border focus:border-accent rounded-md px-5 py-3 outline-none transition-all text-sm">
-                                    <option>Project Consultation</option>
-                                    <option>Procurement Request</option>
-                                    <option>Career Opportunities</option>
-                                    <option>Other Engineering Inquiry</option>
+                                <select wire:model="inquiry_type" class="w-full bg-background border border-border focus:border-accent rounded-md px-5 py-3 outline-none transition-all text-sm">
+                                    <option value="Project Consultation">Project Consultation</option>
+                                    <option value="Procurement Request">Procurement Request</option>
+                                    <option value="Career Opportunities">Career Opportunities</option>
+                                    <option value="Other Engineering Inquiry">Other Engineering Inquiry</option>
                                 </select>
+                                @error('inquiry_type') <span class="text-red-500 text-xs">{{ $message }}</span> @enderror
                             </div>
                             <div>
                                 <label class="block text-[10px] font-bold text-secondary uppercase tracking-widest mb-2">Message Description</label>
-                                <textarea rows="5" placeholder="Tell us about your project requirements..." class="w-full bg-background border border-border focus:border-accent rounded-md px-5 py-3 outline-none transition-all placeholder:text-gray-300"></textarea>
+                                <textarea wire:model="message" rows="5" placeholder="Tell us about your project requirements..." class="w-full bg-background border border-border focus:border-accent rounded-md px-5 py-3 outline-none transition-all placeholder:text-gray-300"></textarea>
+                                @error('message') <span class="text-red-500 text-xs">{{ $message }}</span> @enderror
                             </div>
-                            <button class="w-full btn-accent py-4">
+                            <button type="submit" class="w-full btn-accent py-4">
                                 Submit Inquiry
                             </button>
                         </form>
