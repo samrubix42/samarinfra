@@ -11,7 +11,7 @@ new #[Title('Home | Samar Infra Pvt Ltd')] class extends Component
 ?>
 <div>
     <!-- ================= HERO SECTION ================= -->
-    <section class="pt-20 pb-24 bg-background">
+    <section class="pt-10 md:pt-20 pb-20 bg-background">
 
         <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
 
@@ -57,9 +57,9 @@ new #[Title('Home | Samar Infra Pvt Ltd')] class extends Component
 
             <!-- RIGHT IMAGE -->
             <div>
-                <div class="rounded-xl overflow-hidden">
+                <div class="overflow-hidden">
                     <img
-                        src="/images/construction-hero.jpg"
+                        src="/images/highway-road-curve-isolated-transparent-background_585784-4620-removebg-preview.png"
                         alt="Samar Infra Project"
                         class="w-full  object-contain">
                 </div>
@@ -104,7 +104,7 @@ new #[Title('Home | Samar Infra Pvt Ltd')] class extends Component
 
         </div>
     </section>
-    <section class="py-24 bg-background">
+    <section class="pt-10 md:pt-20 pb-20 bg-background">
         <div class="container-custom">
 
             <!-- SECTION HEADER -->
@@ -130,7 +130,7 @@ new #[Title('Home | Samar Infra Pvt Ltd')] class extends Component
             <div class="grid md:grid-cols-3 gap-10">
 
                 <!-- CARD 1 -->
-                <div class="p-10 border border-border rounded-xl transition hover:border-primary">
+                <div class="p-10 border border-border rounded-xl transition hover:shadow-xl">
 
                     <div class="w-12 h-12 flex items-center justify-center rounded-md bg-accent text-white mb-6">
                         <i class="ri-road-map-line text-lg"></i>
@@ -148,7 +148,7 @@ new #[Title('Home | Samar Infra Pvt Ltd')] class extends Component
 
 
                 <!-- CARD 2 -->
-                <div class="p-10 border border-border rounded-xl transition hover:border-primary">
+                <div class="p-10 border border-border rounded-xl transition hover:shadow-xl">
 
                     <div class="w-12 h-12 flex items-center justify-center rounded-md bg-accent text-white mb-6">
                         <i class="ri-train-line text-lg"></i>
@@ -166,7 +166,7 @@ new #[Title('Home | Samar Infra Pvt Ltd')] class extends Component
 
 
                 <!-- CARD 3 -->
-                <div class="p-10 border border-border rounded-xl transition hover:border-primary">
+                <div class="p-10 border border-border rounded-xl transition hover:shadow-xl">
 
                     <div class="w-12 h-12 flex items-center justify-center rounded-md bg-accent text-white mb-6">
                         <i class="ri-building-4-line text-lg"></i>
@@ -186,7 +186,7 @@ new #[Title('Home | Samar Infra Pvt Ltd')] class extends Component
 
         </div>
     </section>
-    <section class="py-24 bg-background-soft border-t border-border">
+    <section class="pt-10 md:pt-20 pb-20 bg-background-soft border-t border-border">
         <div class="container-custom">
 
             <!-- SECTION HEADER -->
@@ -260,7 +260,7 @@ new #[Title('Home | Samar Infra Pvt Ltd')] class extends Component
 
         </div>
     </section>
-    <section class="py-24 bg-background">
+    <section class="pt-10 md:pt-20 pb-20 bg-background">
         <div class="container-custom">
 
             <!-- SECTION HEADER -->
@@ -345,7 +345,7 @@ new #[Title('Home | Samar Infra Pvt Ltd')] class extends Component
 
         </div>
     </section>
-    <section class="py-24 bg-background-soft border-t border-border">
+    <section class="pt-10 md:pt-20 pb-20 bg-background-soft border-t border-border">
         <div class="container-custom">
 
             <!-- SECTION HEADER -->

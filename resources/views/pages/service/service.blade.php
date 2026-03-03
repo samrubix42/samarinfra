@@ -10,8 +10,8 @@ new #[Title('Our Services | Samar Infra Pvt Ltd')] class extends Component
 ?>
 
 <div class="bg-background min-h-screen">
-    <!-- BANNER SECTION -->
-    <section class="pt-28 pb-20 bg-background border-b border-border">
+    <!-- BANNER SECTION --> 
+    <section class="pt-10 md:pt-20 pb-20 bg-background border-b border-border">
         <div class="container-custom max-w-4xl">
             <span class="text-accent text-xs font-semibold uppercase tracking-[0.25em]">
                 Engineering Excellence
@@ -63,7 +63,7 @@ new #[Title('Our Services | Samar Infra Pvt Ltd')] class extends Component
                 </div>
                 <div class="relative order-1 lg:order-2">
                     <div class="absolute -bottom-6 -right-6 w-full h-full -xl"></div>
-                    <img src="/hero_highway_construction_1772435224309.png" alt="Highway Construction" class="relative rounded-xl w-full h-[400px] object-cover grayscale hover:grayscale-0 transition-all duration-700">
+                    <img src="/images/car-driving-highway-bridge-generative-ai_410516-71752.jpg" alt="Highway Construction" class="relative rounded-xl w-full h-[400px] object-cover  hover:-0 transition-all duration-700">
                 </div>
             </div>
 
@@ -71,7 +71,7 @@ new #[Title('Our Services | Samar Infra Pvt Ltd')] class extends Component
             <div class="grid lg:grid-cols-2 gap-20 items-center">
                 <div class="relative">
                     <div class="absolute -bottom-6 -left-6 w-full h-full -xl"></div>
-                    <img src="/railway_metro_infrastructure_1772435294249.png" alt="Railway Infrastructure" class="relative rounded-xl w-full h-[400px] object-cover grayscale hover:grayscale-0 transition-all duration-700">
+                    <img src="/images/people-entering-train-subway-station-modern-metro-station-platform-men-women-traveling-by-public-transport-city_575670-1959.jpg" alt="Railway Infrastructure" class="relative rounded-xl w-full h-[400px] object-cover  hover:-0 transition-all duration-700">
                 </div>
                 <div>
                     <span class="text-accent text-xs font-semibold uppercase tracking-[0.25em]">
@@ -144,7 +144,7 @@ new #[Title('Our Services | Samar Infra Pvt Ltd')] class extends Component
                 </div>
                 <div class="relative order-1 lg:order-2">
                     <div class="absolute -bottom-6 -right-6 w-full h-full -xl"></div>
-                    <img src="/crushing_plant_mining_1772435274771.png" alt="Mining Operations" class="relative rounded-xl w-full h-[400px] object-cover grayscale hover:grayscale-0 transition-all duration-700">
+                    <img src="/images/professional-excavator-demolition-building-construction-site_999671-91019.jpg" alt="Mining Operations" class="relative rounded-xl w-full h-[400px] object-cover  hover:-0 transition-all duration-700">
                 </div>
             </div>
 

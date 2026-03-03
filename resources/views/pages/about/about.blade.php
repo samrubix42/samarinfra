@@ -10,7 +10,7 @@ new #[Title('About Us | Samar Infra Pvt Ltd')] class extends Component
 ?>
 
 <div>
-    <section class="pt-28 pb-20 bg-background border-b border-border">
+    <section class="pt-10 md:pt-20 pb-20 bg-background border-b border-border">
         <div class="container-custom max-w-4xl">
 
             <span class="text-accent text-xs font-semibold uppercase tracking-[0.25em]">
@@ -29,7 +29,7 @@ new #[Title('About Us | Samar Infra Pvt Ltd')] class extends Component
 
         </div>
     </section>
-    <section class="py-20 bg-background">
+    <section class="pt-10 md:pt-20 pb-20 bg-background">
         <div class="container-custom grid lg:grid-cols-2 gap-20 items-center">
 
             <!-- IMAGE SIDE -->
@@ -37,7 +37,7 @@ new #[Title('About Us | Samar Infra Pvt Ltd')] class extends Component
                 <!-- Accent Background Frame -->
                 <div class="absolute -bottom-6 -right-6 w-full h-full -xl"></div>
 
-                <img src="/images/about-company.jpg"
+                <img src="/images/about-company.svg"
                     alt="Samar Infra Operations"
                     class="relative rounded-xl w-full h-[460px] object-cover">
             </div>
@@ -97,7 +97,7 @@ new #[Title('About Us | Samar Infra Pvt Ltd')] class extends Component
 
         </div>
     </section>
-    <section class="py-20 bg-background-soft border-t border-border">
+    <section class="pt-10 md:pt-20 pb-20 bg-background-soft border-t border-border">
         <div class="container-custom">
 
             <!-- SECTION HEADER -->
@@ -160,7 +160,7 @@ new #[Title('About Us | Samar Infra Pvt Ltd')] class extends Component
 
         </div>
     </section>
-    <section class="py-20 bg-background-soft border-t border-border">
+    <section class="pt-10 md:pt-20 pb-20 bg-background-soft border-t border-border">
         <div class="container-custom">
 
             <!-- Section Header -->
@@ -211,7 +211,7 @@ new #[Title('About Us | Samar Infra Pvt Ltd')] class extends Component
 
         </div>
     </section>
-    <section class="py-20 bg-background border-t border-border">
+    <section class="pt-10 md:pt-20 pb-20 bg-background border-t border-border">
         <div class="container-custom">
 
             <!-- Header -->
@@ -277,7 +277,7 @@ new #[Title('About Us | Samar Infra Pvt Ltd')] class extends Component
 
         </div>
     </section>
-    <section class="py-20 bg-background border-t border-border">
+    <section class="pt-10 md:pt-20 pb-20 bg-background border-t border-border">
         <div class="container-custom">
 
             <div class="max-w-4xl mx-auto text-center">

@@ -11,7 +11,7 @@ new #[Title('Contact Us | Samar Infra Pvt Ltd')] class extends Component
 
 <div class="bg-background min-h-screen">
     <!-- BANNER SECTION -->
-    <section class="pt-28 pb-20 bg-background border-b border-border">
+    <section class="pt-10 md:pt-20 pb-20 bg-background border-b border-border">
         <div class="container-custom max-w-4xl text-center">
             <span class="text-accent text-xs font-semibold uppercase tracking-[0.25em]">
                 Partner With Us
