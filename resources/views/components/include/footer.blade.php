@@ -99,8 +99,8 @@ new class extends Component {};
                     <li class="flex items-start gap-3">
                         <i class="ri-phone-line text-accent mt-1"></i>
                         <div>
-                            <span class="block">+91 99998 65786</span>
-                            <span class="block">+91 99537 91500</span>
+                            <a href="tel:+919999865786" class="block hover:text-primary transition">+91 99998 65786</a>
+                            <a href="tel:+919953791500" class="block hover:text-primary transition">+91 99537 91500</a>
                         </div>
                     </li>
 

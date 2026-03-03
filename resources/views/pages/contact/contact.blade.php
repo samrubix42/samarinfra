@@ -111,8 +111,8 @@ new #[Title('Contact Us | Samar Infra Pvt Ltd')] class extends Component
                         <div>
                             <span class="text-accent text-xs font-bold uppercase tracking-widest block mb-4">Call Support</span>
                             <p class="text-primary font-bold leading-relaxed">
-                                +91 99998 65786<br>
-                                +91 99537 91500
+                                <a href="tel:+919999865786" class="hover:text-accent transition">+91 99998 65786</a><br>
+                                <a href="tel:+919953791500" class="hover:text-accent transition">+91 99537 91500</a>
                             </p>
                         </div>
                     </div>
