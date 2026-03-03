@@ -286,14 +286,16 @@ new #[Title('Home | Samar Infra Pvt Ltd')] class extends Component
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
 
                 <!-- PROJECT 1 -->
-                <div class="border border-border rounded-xl overflow-hidden">
-
-                    <img src="/images/project1.jpg"
-                        alt="Delhi Mumbai Expressway"
-                        class="w-full h-56 object-cover">
+                <a href="{{ route('service') }}" class="group block border border-border rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-500">
+                    <div class="relative overflow-hidden">
+                        <img src="/images/project_highway_expressway.png"
+                            alt="Delhi Mumbai Expressway"
+                            class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </div>
 
                     <div class="p-8">
-                        <h3 class="text-lg font-semibold text-primary mb-3">
+                        <h3 class="text-lg font-semibold text-primary mb-3 group-hover:text-accent transition-colors">
                             Delhi–Mumbai Expressway
                         </h3>
                         <p class="text-sm text-secondary leading-relaxed">
@@ -301,18 +303,20 @@ new #[Title('Home | Samar Infra Pvt Ltd')] class extends Component
                             contributing to India's largest expressway corridor.
                         </p>
                     </div>
-                </div>
+                </a>
 
 
                 <!-- PROJECT 2 -->
-                <div class="border border-border rounded-xl overflow-hidden">
-
-                    <img src="/images/project2.jpg"
-                        alt="Delhi Meerut RRTS"
-                        class="w-full h-56 object-cover">
+                <a href="{{ route('service') }}" class="group block border border-border rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-500">
+                    <div class="relative overflow-hidden">
+                        <img src="/images/project_railway_rrts.png"
+                            alt="Delhi Meerut RRTS"
+                            class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </div>
 
                     <div class="p-8">
-                        <h3 class="text-lg font-semibold text-primary mb-3">
+                        <h3 class="text-lg font-semibold text-primary mb-3 group-hover:text-accent transition-colors">
                             Delhi–Meerut RRTS
                         </h3>
                         <p class="text-sm text-secondary leading-relaxed">
@@ -320,18 +324,20 @@ new #[Title('Home | Samar Infra Pvt Ltd')] class extends Component
                             for Afcons & L&T execution packages.
                         </p>
                     </div>
-                </div>
+                </a>
 
 
                 <!-- PROJECT 3 -->
-                <div class="border border-border rounded-xl overflow-hidden">
-
-                    <img src="/images/project3.jpg"
-                        alt="Ukai Thermal Power Project"
-                        class="w-full h-56 object-cover">
+                <a href="{{ route('service') }}" class="group block border border-border rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-500">
+                    <div class="relative overflow-hidden">
+                        <img src="/images/project_thermal_power.png"
+                            alt="Ukai Thermal Power Project"
+                            class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </div>
 
                     <div class="p-8">
-                        <h3 class="text-lg font-semibold text-primary mb-3">
+                        <h3 class="text-lg font-semibold text-primary mb-3 group-hover:text-accent transition-colors">
                             Ukai Thermal Power Project
                         </h3>
                         <p class="text-sm text-secondary leading-relaxed">
@@ -339,7 +345,7 @@ new #[Title('Home | Samar Infra Pvt Ltd')] class extends Component
                             project executed with operational excellence.
                         </p>
                     </div>
-                </div>
+                </a>
 
             </div>
 
